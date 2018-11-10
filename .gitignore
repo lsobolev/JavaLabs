@@ -18,3 +18,6 @@
 /out/
 /.metadata/
 /.idea/
+/Java.iml
+/java.properties
+/.gitignore
