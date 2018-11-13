@@ -3,15 +3,23 @@ package by.bntu.fitr.povt.justcompileit.javalabs.lab07.dop.model;
 
 public class MyCalendar {
 
+    private final int MIN_YEAR = 0;
+    private final int MIN_MOTH = 1;
+    private final int MAX_MONTH = 12;
+    private final int MIN_DAY = 1;
+
     private int year;
     private int month;
     private int day;
 
     public MyCalendar(int year, int month, int day) {
-        this.year = year;
-        this.month = month;
-        this.day = day;
+        this.year = validateYear(year);
+        this.month = validateMonth(month);
+        this.day = validateDay(day);
     }
+
+
+
 
     public int getYear() {
         return year;
@@ -25,7 +33,33 @@ public class MyCalendar {
         return day;
     }
 
+    private int validateYear(int year) {
+        if (year >= MIN_YEAR) {
+            return year;
+        } else {
+            return MIN_YEAR;
+        }
+    }
+
+    private int validateMonth(int month) {
+        if (month >= MIN_MOTH && month <= MAX_MONTH) {
+            return month;
+        } else {
+            return MIN_MOTH;
+        }
+    }
+
+    private int validateDay(int day) {
+        if (day >= MIN_DAY && day <= getMaxDayMonth()) {
+            return day;
+        } else {
+            return 1;
+        }
+    }
+
     public int getMaxDayMonth() {
+
+        int maxDay;
 
         switch (month) {
             case 1:
@@ -35,21 +69,27 @@ public class MyCalendar {
             case 8:
             case 10:
             case 12:
-                return 31;
+                maxDay = 31;
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
-                return 30;
+                maxDay = 30;
+                break;
             case 2:
                 if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-                    return 29;
+                    maxDay = 29;
+                    break;
                 } else {
-                    return 28;
+                    maxDay = 28;
+                    break;
                 }
             default:
-                return 0;
+                maxDay = 0;
         }
+
+        return maxDay;
     }
 
     public String calculateNextDay() {
@@ -69,11 +109,11 @@ public class MyCalendar {
             ++nextDay;
         }
 
-        return String.format("%d.%d.%d", nextDay, nextMonth, nextYear);
+        return String.format("%02d.%02d.%d", nextDay, nextMonth, nextYear);
     }
 
     @Override
     public String toString() {
-        return String.format("Set date: %d.%d.%d", day, month, year);
+        return String.format("Set date: %02d.%02d.%02d", day, month, year);
     }
 }
