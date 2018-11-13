@@ -1,8 +1,9 @@
 package by.bntu.fitr.povt.justcompileit.javalabs.lab07.task5.controller;
 
-import by.bntu.fitr.povt.justcompileit.javalabs.lab07.userinput.UserInput;
 import by.bntu.fitr.povt.justcompileit.javalabs.lab07.printer.Printer;
 import by.bntu.fitr.povt.justcompileit.javalabs.lab07.task5.model.Letter;
+import by.bntu.fitr.povt.justcompileit.javalabs.lab07.userinput.UserInput;
+
 
 public class Controller {
 
@@ -10,9 +11,9 @@ public class Controller {
 
         char letter = UserInput.inputChar("Input letter: ");
 
-        boolean result = Letter.isVowels(letter);
+        String result = Letter.isVowel(letter);
 
-        Printer.view("Letter " + "\'" + letter + "\'" + " is " + (result ? "vowel." : "consonant."));
+        Printer.view("Letter " + "\'" + letter + "\'" + " is " + result + "." );
 
     }
 
