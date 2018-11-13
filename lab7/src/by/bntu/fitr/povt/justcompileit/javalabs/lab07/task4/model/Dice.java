@@ -10,14 +10,14 @@ public class Dice {
     private int droppedNumber;
 
     public Dice() {
-        droppedNumber = getNextNumber();
+        droppedNumber = dropDice();
     }
 
     public int getDroppedNumber() {
         return droppedNumber;
     }
 
-    public int getNextNumber() {
+    public int dropDice() {
         return new Random().nextInt(MAX_NUM) + MIN_NUM;
     }
 

@@ -9,7 +9,7 @@ public class Controller {
 
         MyMood myMood = new MyMood();
 
-        Printer.view("Your mood is now: " + myMood.getMood());
+        Printer.view("Your mood is now: " + myMood.getMyMood());
 
     }
 }

@@ -14,7 +14,7 @@ public class MyMood {
     }
 
 
-    public String getMood() {
+    public String getMyMood() {
 
         String mood;
 
@@ -65,12 +65,12 @@ public class MyMood {
     }
 
     public String getNextMyMood() {
-        numRandomMood = new Random().nextInt(NUM_ALL_MOOD) + 1;
-        return getMood();
+        this.numRandomMood = new Random().nextInt(NUM_ALL_MOOD) + 1;
+        return getMyMood();
     }
 
     @Override
     public String toString() {
-        return "My Mood: " + getMood();
+        return "My Mood: " + getMyMood();
     }
 }
