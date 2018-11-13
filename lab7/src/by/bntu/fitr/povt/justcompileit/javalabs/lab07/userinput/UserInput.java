@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class UserInput {
 
 
-    public static String input(String msg) {
+    public static String inputString(String msg) {
 
         System.out.print(msg);
         return new Scanner(System.in).next();
