@@ -6,6 +6,7 @@ package by.bntu.fitr.povt.justcompileit.javalabs.lab07.printer;
  * @author Just compile IT
  * @since 1.0
  */
+
 public class Printer {
 
     /**
