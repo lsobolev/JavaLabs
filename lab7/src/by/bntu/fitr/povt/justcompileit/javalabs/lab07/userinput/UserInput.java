@@ -13,6 +13,14 @@ import java.util.Scanner;
 public class UserInput {
 
 
+    /**
+     * Method for input string data
+     *
+     * @param msg
+     * @return String object
+     */
+
+
     public static String inputString(String msg) {
 
         System.out.print(msg);
@@ -59,6 +67,13 @@ public class UserInput {
         return scanner.nextDouble();
     }
 
+    /**
+     * Method for input one char symbol
+     *
+     * @param msg
+     * @return Character
+     */
+
     public static char inputChar(String msg) {
 
         Scanner scanner = new Scanner(System.in);
@@ -67,6 +82,13 @@ public class UserInput {
         return scanner.next().charAt(0);
     }
 
+
+    /**
+     * Method for receiving Long number
+     *
+     * @param msg
+     * @return Long number
+     */
 
     public static long inputLong(String msg) {
 
