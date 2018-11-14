@@ -12,6 +12,9 @@ public class Controller {
 
         Printer.view("Dropped first num: " + dice1.getDroppedNumber());
         Printer.view("Dropped second num: " + dice2.getDroppedNumber());
+        if (dice1.getDroppedNumber() == dice2.getDroppedNumber()){
+            Printer.view("\nCongratulation!\nYou are a lucky man!\nFirst num = Second num\n");
+        }
         Printer.view("Total sum: " + (dice1.getDroppedNumber() + dice2.getDroppedNumber()));
     }
 
