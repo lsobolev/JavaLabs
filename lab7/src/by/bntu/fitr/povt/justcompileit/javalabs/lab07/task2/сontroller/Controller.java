@@ -12,9 +12,9 @@ public class Controller {
         double num2 = UserInput.inputDouble("Input second num: ");
         double num3 = UserInput.inputDouble("Input third num: ");
 
-        String result = Number.maxNumber(num1, num2, num3);
+        double result = Number.maxNumber(num1, num2, num3);
 
-        Printer.view(result);
+        Printer.view("Max number: " + result);
 
     }
 }
