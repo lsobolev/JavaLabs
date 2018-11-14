@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class MyMood {
 
-
     private final String MOOD_1 = "\u0f3c( \u0361\u2299 \u0a0a \u0361\u2299)\u0f3d";
     private final String MOOD_2 = "\u10da ( \u25d5 \u15dc \u25d5 ) \u10da";
     private final String MOOD_3 = "( \u0361\u2191 \u035c\u0296 \u0361\u2191)";
@@ -19,6 +18,7 @@ public class MyMood {
     private final String MOOD_11 = "o\u0361\u0361\u0361\u256e\u0f3c . \u2022\u0301 _\u0296 \u2022\u0300 . \u0f3d\u256do\u0361\u0361\u0361";
     private final String MOOD_12 = ".\u2022\u00b4\u00af(>\u2582<)\u00b4\u00af\u2022.";
     private final String MOOD_13 = "(\u033f\u0ca0 \u033f\u0139\u032f\u033f\u033f\u0ca0 \u033f)\u0304";
+    private final String DEFAULT_MOOD = ":-(";
 
     public final int NUM_ALL_MOOD = 13;
 
@@ -75,7 +75,7 @@ public class MyMood {
                 mood = MOOD_13;
                 break;
             default:
-                mood = ":-(";
+                mood = DEFAULT_MOOD;
         }
         return mood;
     }

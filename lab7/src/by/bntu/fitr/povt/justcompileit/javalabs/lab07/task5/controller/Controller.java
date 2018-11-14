@@ -13,7 +13,7 @@ public class Controller {
 
         String result = Letter.isVowel(letter);
 
-        Printer.view("Letter " + "\'" + letter + "\'" + " is " + result + "." );
+        Printer.view("Symbol " + "\'" + letter + "\'" + " is " + result + "." );
 
     }
 

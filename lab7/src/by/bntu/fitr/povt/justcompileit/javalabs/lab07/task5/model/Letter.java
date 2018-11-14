@@ -14,10 +14,10 @@ public class Letter {
                 case 'o':
                 case 'u':
                 case 'y':
-                    result.append("is vowel");
+                    result.append("vowel letter");
                     break;
                 default:
-                    result.append("is consonant");
+                    result.append("consonant letter");
             }
         } else {
             result.append("not a letter");
