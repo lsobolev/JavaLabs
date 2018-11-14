@@ -25,4 +25,22 @@ public class Letter {
         return result.toString();
     }
 
+    public static String isVowel1(char letter) {
+
+        StringBuilder result = new StringBuilder();
+
+        if (Character.isLetter(letter)) {
+            letter = Character.toLowerCase(letter);
+
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'y') {
+                result.append("vowel letter");
+            } else {
+                result.append("not a letter");
+            }
+        }
+        else {
+            result.append("not a letter");
+        }
+        return result.toString();
+    }
 }
