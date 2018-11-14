@@ -19,8 +19,6 @@ public class MyCalendar {
     }
 
 
-
-
     public int getYear() {
         return year;
     }
