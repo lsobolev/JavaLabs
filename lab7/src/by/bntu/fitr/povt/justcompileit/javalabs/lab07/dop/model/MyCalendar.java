@@ -51,7 +51,7 @@ public class MyCalendar {
         if (day >= MIN_DAY && day <= getMaxDayMonth()) {
             return day;
         } else {
-            return 1;
+            return MIN_DAY;
         }
     }
 
@@ -96,12 +96,12 @@ public class MyCalendar {
         int nextMonth = month;
         int nextYear = year;
 
-        if (day == getMaxDayMonth() && month == 12) {
-            nextDay = 1;
-            nextMonth = 1;
+        if (day == getMaxDayMonth() && month == MAX_MONTH) {
+            nextDay = MIN_DAY;
+            nextMonth = MIN_MOTH;
             ++nextYear;
         } else if (day == getMaxDayMonth()) {
-            nextDay = 1;
+            nextDay = MIN_DAY;
             ++nextMonth;
         } else {
             ++nextDay;

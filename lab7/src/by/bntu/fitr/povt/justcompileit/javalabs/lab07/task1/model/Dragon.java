@@ -18,7 +18,7 @@ public class Dragon {
         this.numHead = 3;
         this.numEyes = numHead * 2;
         this.age = this.ageValidation(age);
-        this.calculateHead();
+        this.countHeads();
     }
 
     public String getName() {
@@ -45,7 +45,7 @@ public class Dragon {
         }
     }
 
-    private void calculateHead() {
+    private void countHeads() {
 
         int age = this.age;
 
