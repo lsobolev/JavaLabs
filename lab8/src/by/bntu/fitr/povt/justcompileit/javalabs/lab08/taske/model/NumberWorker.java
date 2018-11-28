@@ -4,6 +4,7 @@ public class NumberWorker {
 
     private static final int FIRST_FIBONACCI_NUM = 0;
     private static final int SECOND_FIBONACCI_NUM = 1;
+    private static final int MIN_DIGIT_IN_DECIMAL_BASE = 0;
 
 
     public static String getFibonacciSequence(int num) {
@@ -13,7 +14,8 @@ public class NumberWorker {
         int firstNum = FIRST_FIBONACCI_NUM;
         int secondNum = SECOND_FIBONACCI_NUM;
 
-        while (num > 0) {
+
+        while (num > MIN_DIGIT_IN_DECIMAL_BASE) {
 
             sequence.append(String.format("%d ", firstNum));
 
@@ -22,7 +24,6 @@ public class NumberWorker {
             firstNum = swap_el;
 
             num--;
-
         }
 
         return sequence.toString();

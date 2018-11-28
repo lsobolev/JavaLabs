@@ -3,16 +3,17 @@ package by.bntu.fitr.povt.justcompileit.javalabs.lab08.taskd.model;
 public class NumberWorker {
 
     private static final int DECIMAL_BASE = 10;
+    private static final int MIN_DIGIT_IN_DECIMAL_BASE = 0;
 
 
     public static long duplicationMaxNum(long num) {
 
         int maxNumber = maxDigit(num);
-        long newNumber = 0;
+        long newNumber = MIN_DIGIT_IN_DECIMAL_BASE;
 
-        int i = 0;
+        int i = 0; // power 10
 
-        while (num > 0) {
+        while (num > MIN_DIGIT_IN_DECIMAL_BASE) {
 
             int digit = (int) (num % DECIMAL_BASE);
 
@@ -31,9 +32,9 @@ public class NumberWorker {
 
     public static int maxDigit(long num) {
 
-        int max = 0;
+        int max = MIN_DIGIT_IN_DECIMAL_BASE;
 
-        while (num > 0) {
+        while (num > MIN_DIGIT_IN_DECIMAL_BASE) {
 
             int digit = (int) (num % DECIMAL_BASE);
 
