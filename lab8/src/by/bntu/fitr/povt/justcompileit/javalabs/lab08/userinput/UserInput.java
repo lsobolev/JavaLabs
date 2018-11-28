@@ -47,7 +47,7 @@ public class UserInput {
         return scanner.nextInt();
     }
 
-    public static int inputNaturalNumber(String msg) {
+    public static int inputIntNaturalNumber(String msg) {
 
         int num = inputInt(msg);
 
@@ -112,6 +112,17 @@ public class UserInput {
             scanner.next();
         }
         return scanner.nextLong();
+    }
+
+    public static long inputLongNaturalNumber(String msg) {
+
+        long num = inputLong(msg);
+
+        while (num < 0) {
+            System.out.println("That not a natural number!");
+            num = inputInt(msg);
+        }
+        return num;
     }
 
 }

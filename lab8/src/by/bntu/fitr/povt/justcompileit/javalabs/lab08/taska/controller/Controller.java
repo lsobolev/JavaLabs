@@ -8,7 +8,7 @@ public class Controller {
 
     public static void main(String[] args) {
 
-        int num = UserInput.inputNaturalNumber("Input your number: ");
+        int num = UserInput.inputIntNaturalNumber("Input your number: ");
         String result = NumberWorker.calculateSumOfNumberOfDigit(num);
 
         Printer.view(result);

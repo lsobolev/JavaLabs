@@ -7,7 +7,7 @@ public class NumberWorker {
 
     public static long duplicationMaxNum(long num) {
 
-        int maxDigit = maxDigit(num);
+        int maxNumber = maxDigit(num);
         long newNumber = 0;
 
         int i = 0;
@@ -16,7 +16,7 @@ public class NumberWorker {
 
             int digit = (int) (num % DECIMAL_BASE);
 
-            if (digit == maxDigit) {
+            if (digit == maxNumber) {
                 newNumber += digit * Math.pow(DECIMAL_BASE, i);
                 i++;
             }

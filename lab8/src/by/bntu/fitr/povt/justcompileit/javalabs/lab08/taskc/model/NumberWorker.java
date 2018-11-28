@@ -3,7 +3,7 @@ package by.bntu.fitr.povt.justcompileit.javalabs.lab08.taskc.model;
 public class NumberWorker {
 
     private static final long DECIMAL_BASE = 10;
-    private static final String DEFAULT_RESULT = "Sequence does not decrease and does not increase" ;
+    private static final String DEFAULT_RESULT = "Sequence not decrease and not increase";
     private static final String TRUE_RESULT = "Sequence is increase";
     private static final String FALSE_RESULT = "Sequence is decrease";
 
