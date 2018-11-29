@@ -8,7 +8,7 @@ public class Controller {
 
     public static void main(String[] args) {
 
-        int num = UserInput.inputIntNaturalNumber("Input your number: ");
+        int num = UserInput.inputInt("Input your number: ");
 
         String result = NumberWorker.checkContainNumberEvenNumbers(num);
 

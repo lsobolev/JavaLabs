@@ -5,28 +5,40 @@ public class NumberWorker {
     private static final int DECIMAL_BASE = 10;
     private static final int MIN_DIGIT_IN_DECIMAL_BASE = 0;
 
+    private static final String INVALID_DATA = "Invalid data!";
+    private static final String DEFAULT_RESULT = "0";
 
-    public static long duplicationMaxNum(long num) {
 
-        int maxNumber = maxDigit(num);
-        long newNumber = MIN_DIGIT_IN_DECIMAL_BASE;
+    public static String duplicationMaxNum(long num) {
 
-        int i = 0; // power 10
+        String result;
 
-        while (num > MIN_DIGIT_IN_DECIMAL_BASE) {
+        if (num > 0) {
 
-            int digit = (int) (num % DECIMAL_BASE);
+            int maxNumber = maxDigit(num);
+            long newNumber = MIN_DIGIT_IN_DECIMAL_BASE;
 
-            if (digit == maxNumber) {
+            int i = 0; // power 10
+
+            while (num > MIN_DIGIT_IN_DECIMAL_BASE) {
+
+                int digit = (int) (num % DECIMAL_BASE);
+
+                if (digit == maxNumber) {
+                    newNumber += digit * Math.pow(DECIMAL_BASE, i);
+                    i++;
+                }
                 newNumber += digit * Math.pow(DECIMAL_BASE, i);
                 i++;
-            }
-            newNumber += digit * Math.pow(DECIMAL_BASE, i);
-            i++;
 
-            num /= DECIMAL_BASE;
+                num /= DECIMAL_BASE;
+            }
+
+            result = Long.toString(newNumber);
+        } else {
+            result = INVALID_DATA;
         }
-        return newNumber;
+        return result;
     }
 
 

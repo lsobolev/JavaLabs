@@ -7,7 +7,7 @@ import by.bntu.fitr.povt.justcompileit.javalabs.lab08.userinput.UserInput;
 public class Controller {
 
     public static void main(String[] args) {
-        int num = UserInput.inputIntNaturalNumber("Input number of element: ");
+        int num = UserInput.inputInt("Input number of element: ");
 
         String result = NumberWorker.getFibonacciSequence(num);
 

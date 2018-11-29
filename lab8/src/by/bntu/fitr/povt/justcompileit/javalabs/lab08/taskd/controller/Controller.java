@@ -8,9 +8,9 @@ public class Controller {
 
     public static void main(String[] args) {
 
-        long num = UserInput.inputLongNaturalNumber("Input your number: ");
+        long num = UserInput.inputLong("Input your number: ");
 
-        long result = NumberWorker.duplicationMaxNum(num);
+        String result = NumberWorker.duplicationMaxNum(num);
 
         Printer.view("New number: " + result);
     }

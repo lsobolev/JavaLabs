@@ -7,9 +7,9 @@ import by.bntu.fitr.povt.justcompileit.javalabs.lab08.userinput.UserInput;
 public class Controller {
 
     public static void main(String[] args) {
-        long num = UserInput.inputLongNaturalNumber("Input your number: ");
+        long num = UserInput.inputLong("Input your number: ");
 
-        String result = NumberWorker.isSequence(num);
+        String result = NumberWorker.isIncreaseSequence(num);
 
         Printer.view(result);
     }
